@@ -1,0 +1,11 @@
+
+header.header {
+  text-transform: uppercase;
+  width: 100%;
+  padding: 1%;
+  display: flex;
+  justify-content: center;
+  color: rgba(65, 184, 131, 1);
+  background-color: #fff;
+  box-shadow: 0 7px 15px rgba(0, 0, 0, 0.3);
+}
