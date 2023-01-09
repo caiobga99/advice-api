@@ -13,16 +13,43 @@ main {
   justify-content: center;
   flex-direction: column;
   height: 50%;
-  width: 50%;
+  width: 40%;
   background-color: #efefef;
   border: 1px solid #000;
   border-radius: 1.7rem;
+  border-top-right-radius: 0.1rem;
+  border-bottom-right-radius: 0.1rem;
+  padding: 1%;
+  font-size: 1.3rem;
+}
+
+.translate {
+  height: 50%;
+  width: 15%;
+  background-color: #efefef;
+  border-top-right-radius: 1.7rem;
+  border-bottom-right-radius: 1.7rem;
+  border-top-left-radius: 0.1rem;
+  border-bottom-left-radius: 0.1rem;
+  border: 1px solid #000;
   padding: 1%;
   font-size: 1.3rem;
 }
 .content {
   height: 100%;
   word-break: break-all;
+  width: 100%;
+}
+.translate-header {
+  height: 15%;
+  width: 100%;
+}
+.translate-main {
+  height: 70%;
+  width: 100%;
+}
+.translate-footer {
+  height: 15%;
   width: 100%;
 }
 .buttons-group {
