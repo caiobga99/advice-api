@@ -6,9 +6,11 @@ import { useEffect } from "react";
 function Main() {
   const [loading, setLoading] = useState(false);
   const [advice, setAdvice] = useState("");
+  const [classNone, setClassNone] = useState("");
   const getApi = () => {
     setAdvice("");
     setLoading(true);
+    setClassNone("none");
     document.querySelector(".of").classList.add("none");
     axios
       .get("https://api.adviceslip.com/advice")
@@ -57,7 +59,8 @@ function Main() {
         setLoading(false);
         console.log(res.data);
         setAdvice(res.data.translatedText);
-      });
+      })
+      .catch((error) => console.log(error));
   };
 
   return (
@@ -68,7 +71,9 @@ function Main() {
             <div className="header">
               <h3>Advices</h3>
             </div>
-            <div className="of">Press a next advice to get a new advice...</div>
+            <div className={"of " + classNone}>
+              Press a next advice to get a new advice...
+            </div>
             {loading && <p className="loading">something is loading...</p>}
             <p className="advice">{advice}</p>
           </div>
